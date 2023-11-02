@@ -14,7 +14,7 @@ with st.sidebar:
     st.write("")
 def main():
 	st.header('HELLO, *FRIENDS!* :sunglasses:')
-	st.header('CHAT PDF APP', divider='rainbow')
+	st.header('CHAT PDF APP')
 	
 	pdf = st.file_uploader("UPLOAD YOUR PDF",type='pdf')
 	#st.write(pdf.name)
