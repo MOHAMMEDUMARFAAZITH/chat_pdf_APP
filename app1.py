@@ -99,7 +99,7 @@ def main():
                 		"context":' '.join(final),
                 		"question":user_question
           			}
-  			headers = {
+			headers = {
                 		"accept": "application/json",
                 		"content-type": "application/json",
                 		"Authorization": f"Bearer {AI21_api_key}"
