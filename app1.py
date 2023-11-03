@@ -82,8 +82,8 @@ def main():
 		try:
 			question = query([user_question])
 			query_embeddings = torch.FloatTensor(question)
-    			output=query(chunks)
-    			output=torch.from_numpy(np.array(output)).to(torch.float)
+			output=query(chunks)
+			output=torch.from_numpy(np.array(output)).to(torch.float)
 			
 			#Semantic Search
 			result=util.semantic_search(query_embeddings, output,top_k=2)
