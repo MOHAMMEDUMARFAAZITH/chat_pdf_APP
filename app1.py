@@ -81,7 +81,7 @@ def main():
 		
 		try:
 			question = query([user_question])
-            		query_embeddings = torch.FloatTensor(question)
+			query_embeddings = torch.FloatTensor(question)
     			output=query(chunks)
     			output=torch.from_numpy(np.array(output)).to(torch.float)
 			
