@@ -5,7 +5,6 @@ import numpy as np
 from PyPDF2 import PdfReader
 from sentence_transformers import util
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from bs4 import BeautifulSoup
 import requests
 from PIL import Image
 
