@@ -8,7 +8,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 import requests
 from PIL import Image
 
-image = Image.open(r"C:\Users\RAZITH\Downloads\chatbot.png")
+image = Image.open(r"chatbot.png")
 
 st.image(image,width=675)
 
@@ -16,7 +16,7 @@ st.image(image,width=675)
 
 with st.sidebar: 
 
-    image = Image.open(r"C:\Users\RAZITH\Downloads\chatbot.png")
+    image = Image.open(r"chatbot.png")
 
     st.image(image)
     st.title("CHAT PDF APP")
