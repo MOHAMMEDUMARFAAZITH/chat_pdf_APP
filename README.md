@@ -44,7 +44,9 @@ To deploy this project run
 ```bash
   https://app1py-am8avyl54q5x4susmvthbe.streamlit.app/
 ```
-
+```bash
+https://drive.google.com/file/d/1Cqj_7t4sA7yxIwaqQojX4XYPxLrclBc1/view?usp=sharing
+```
 
 ## Appendix
 
