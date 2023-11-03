@@ -78,22 +78,18 @@ def main():
 		st.write(user_question)
 		st.snow()
 		
-		
-		try:
-			question = query([user_question])
-			query_embeddings = torch.FloatTensor(question)
-			output=query(chunks)
-			output=torch.from_numpy(np.array(output)).to(torch.float)
+		question = query([user_question])
+		query_embeddings = torch.FloatTensor(question)
+		output=query(chunks)
+		output=torch.from_numpy(np.array(output)).to(torch.float)
 			
-			#Semantic Search
-			result=util.semantic_search(query_embeddings, output,top_k=2)
-			final=[chunks[result[0][i]['corpus_id']] for i in range(len(result[0]))]
-		except:
-			st.write("Upload your valid PDF file")
+		#Semantic Search
+		result=util.semantic_search(query_embeddings, output,top_k=2)
+		final=[chunks[result[0][i]['corpus_id']] for i in range(len(result[0]))]
 			
-    			#AI21studio Question Answer model
-			AI21_api_key = 'q6QM3NWgec9PUO85V0shxwo0QueC9QXe'
-			url = "https://api.ai21.com/studio/v1/answer"
+    		#AI21studio Question Answer model
+		AI21_api_key = 'q6QM3NWgec9PUO85V0shxwo0QueC9QXe'
+		url = "https://api.ai21.com/studio/v1/answer"
 		try:
 			payload = {
                 		"context":' '.join(final),
