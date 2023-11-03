@@ -104,7 +104,7 @@ def main():
                 		"content-type": "application/json",
                 		"Authorization": f"Bearer {AI21_api_key}"
           			}
-    			response = requests.post(url, json=payload, headers=headers)
+			response = requests.post(url, json=payload, headers=headers)
 		except:
 			st.write("Upload your valid PDF file")
     
