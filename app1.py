@@ -1,3 +1,4 @@
+#Importing Necessary libraries
 import torch
 import time
 import streamlit as st
@@ -8,16 +9,14 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 import requests
 from PIL import Image
 
+#sample chatbot image
 image = Image.open(r"chatbot.png")
-
 st.image(image,width=675)
 
 
-
+#sidebar contains some useful documentation link to develop a chatbot
 with st.sidebar: 
-
     image = Image.open(r"chatbot.png")
-
     st.image(image)
     st.title("CHAT PDF APP")
     st.write("")
@@ -35,9 +34,8 @@ This is a Chat Pdf App using open source linraries, all without an OpenAI API ke
     st.write("")
     st.write("Made by [MOHAMMED UMAR FAAZITH K]")
 
+#This is a streamlit main function for chatbot
 def main():
-
-	
 	st.header('HELLO, *FRIENDS!* :sunglasses:')
 	st.header('CHAT PDF APP')
 	st.write("")
@@ -45,8 +43,9 @@ def main():
 	pdf = st.file_uploader("UPLOAD YOUR PDF",type='pdf')
 	st.balloons()
 	
-
+#pdf is none it will create some error
 	if pdf is not None:
+		#PdfReader - Used for to read the content in the PDF
 		pdf_reader = PdfReader(pdf)
 		text = ""
 		for page in pdf_reader.pages:
